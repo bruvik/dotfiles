@@ -30,17 +30,19 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
 # set up path
 PATH=/bin:/usr/bin/:/local/bin
- for dir in $HOME/bin \
+for dir in $HOME/bin \
      /bin /local/bin /usr/bin /site/bin \
      /sbin /usr/sbin \
      /local/bin /local/gnu/bin \
      /local/sbin /usr/bin/X11 \
      /usr/local/munki/ \
+     /usr/local/bin/ \
+     /usr/local/sbin/ \
      /opt/local/bin; do
    test -d $dir && path=$path:$dir
- done
- 
- npath=`echo $path | sed 's/^://'`
- declare -x PATH=$npath
- unset path npath
+done
+
+npath=`echo $path | sed 's/^://'`
+declare -x PATH=$npath
+unset path npath
 export PATH=$PATH
