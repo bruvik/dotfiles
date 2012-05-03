@@ -43,3 +43,4 @@ PATH=/bin:/usr/bin/:/local/bin
  npath=`echo $path | sed 's/^://'`
  declare -x PATH=$npath
  unset path npath
+export PATH=$PATH
