@@ -1,3 +1,5 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 " Make vim more useful
 set nocompatible
 " Enhance command-line completion
@@ -26,6 +28,10 @@ endif
 set number
 " Enable syntax highlighting
 syntax on
+" Colors
+set background=dark
+colorscheme solarized
+
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
