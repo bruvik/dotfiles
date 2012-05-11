@@ -1,11 +1,33 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
+call pathogen#helptags()
 " Make vim more useful
 set nocompatible
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
 set esckeys
+set autoread	" reload files changed outside vim
+
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+
+" ================ Indentation ======================
+
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
+
+filetype plugin on
+filetype indent on
+
 " Optimize for fast terminal connections
 set ttyfast
 " Add the g flag to search/replace by default
@@ -43,20 +65,19 @@ set list
 set hlsearch
 " Ignore case of searches
 set ignorecase
+set smartcase
 " Highlight dynamically as pattern is typed
 set incsearch
 " Always show status line
 set laststatus=2
 " Enable mouse in all modes
-set mouse=a
+set mouse=a 		
 " Disable error bells
 set noerrorbells
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
-" Show the cursor position
-set ruler
-" Don’t show the intro message when starting vim
-set shortmess=atI
+set ruler " Show the cursor position
+set shortmess=atI " Don’t show the intro message when starting vim
 " Show the current mode
 set showmode
 " Show the filename in the window titlebar
@@ -85,3 +106,7 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+" cfengine stuff
+au BufRead,BufNewFile *.cf set ft=cf3
+:helptags ~/.vim/bundle/vim_cf3/doc/
