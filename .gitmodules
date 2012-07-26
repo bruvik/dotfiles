@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/vim_cf3"]
 	path = .vim/bundle/vim_cf3
 	url = git://github.com/neilhwatson/vim_cf3.git
+[submodule ".vim/bundle/vim-vst"]
+	path = .vim/bundle/vim-vst
+	url = git://github.com/vim-scripts/VST.git
