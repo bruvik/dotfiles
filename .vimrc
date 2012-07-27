@@ -51,11 +51,10 @@ set number
 " Enable syntax highlighting
 syntax on
 " Colors
+let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
-" Highlight current line
-set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
 " Show “invisible” characters
