@@ -104,8 +104,10 @@ if has("autocmd")
 	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+	autocmd BufNewFile,BufRead *.cf set ft=cf3 
+	au FileType cf3 set expandtab
 endif
 
 " cfengine stuff
-au BufRead,BufNewFile *.cf set ft=cf3
+" au BufRead,BufNewFile *.cf set ft=cf3
 :helptags ~/.vim/bundle/vim_cf3/doc/
