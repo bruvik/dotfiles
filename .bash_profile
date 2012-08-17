@@ -1,5 +1,8 @@
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
+os=`uname -s`
+hostname=`hostname | cut -d. -f1`
+
 for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 	[ -r "$file" ] && source "$file"
 done
@@ -46,3 +49,13 @@ npath=`echo $path | sed 's/^://'`
 declare -x PATH=$npath
 unset path npath
 export PATH=$PATH
+
+# use macvim as standard editor on darwin
+case $os in
+	"Darwin" )
+		EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"' ;;
+	* )
+		EDITOR="vim" ;;
+esac
+
+export EDITOR=$EDITOR
