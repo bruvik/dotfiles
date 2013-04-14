@@ -26,7 +26,7 @@ export LANG="en_US"
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
-complete -W "NSGlobalDomain" defaults
+# complete -W "NSGlobalDomain" defaults
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer" killall
@@ -38,9 +38,9 @@ for dir in $HOME/bin \
      /sbin /usr/sbin \
      /local/bin /local/gnu/bin \
      /local/sbin /usr/bin/X11 \
-     /usr/local/munki/ \
-     /usr/local/bin/ \
-     /usr/local/sbin/ \
+     /usr/local/munki \
+     /usr/local/bin \
+     /usr/local/sbin \
      /opt/local/bin; do
    test -d $dir && path=$path:$dir
 done
