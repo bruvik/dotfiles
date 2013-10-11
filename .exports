@@ -11,3 +11,5 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 # export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+# make vmware fusion default provider for vagrant
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
