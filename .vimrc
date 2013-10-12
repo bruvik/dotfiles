@@ -27,6 +27,8 @@ set expandtab
 
 filetype plugin on
 filetype indent on
+filetype plugin indent on
+
 
 " Optimize for fast terminal connections
 set ttyfast
@@ -111,3 +113,22 @@ endif
 " cfengine stuff
 " au BufRead,BufNewFile *.cf set ft=cf3
 :helptags ~/.vim/bundle/vim_cf3/doc/
+
+au BufRead,BufNewFile *.cf set ft=cf3
+" enable vim_cf3 plugin abbreviations
+let g:EnableCFE3KeywordAbbreviations=1
+
+fun! Getchar()
+        let c = getchar()
+        if c != 0
+                let c = nr2char(c)
+        endif
+        return c
+endfun
+
+fun! Eatchar(pat)
+        let c = Getchar()
+        return (c =~ a:pat) ? '' : c 
+endfun
+
+
