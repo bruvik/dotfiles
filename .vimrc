@@ -3,12 +3,13 @@ call pathogen#infect()
 call pathogen#helptags()
 " Make vim more useful
 set nocompatible
+set modeline
+
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
 set esckeys
 set autoread	" reload files changed outside vim
-
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -24,7 +25,6 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
-
 filetype plugin on
 filetype indent on
 filetype plugin indent on
@@ -38,9 +38,6 @@ set gdefault
 set encoding=utf-8 nobomb
 " Change mapleader
 let mapleader=","
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -72,7 +69,7 @@ set incsearch
 " Always show status line
 set laststatus=2
 " Enable mouse in all modes
-set mouse=a 		
+set mouse=a
 " Disable error bells
 set noerrorbells
 " Don’t reset cursor to start of line when moving around.
@@ -106,7 +103,7 @@ if has("autocmd")
 	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-	autocmd BufNewFile,BufRead *.cf set ft=cf3 
+	autocmd BufNewFile,BufRead *.cf set ft=cf3
 	au FileType cf3 set expandtab
 endif
 
@@ -128,7 +125,11 @@ endfun
 
 fun! Eatchar(pat)
         let c = Getchar()
-        return (c =~ a:pat) ? '' : c 
+        return (c =~ a:pat) ? '' : c
 endfun
 
-
+" autoreload .vimrc
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
