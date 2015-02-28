@@ -34,15 +34,15 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 # set up path
 PATH=/bin:/usr/bin/:/local/bin
 for dir in $HOME/bin \
-     /bin /local/bin /usr/bin /site/bin \
-     /sbin /usr/sbin \
-     /local/bin /local/gnu/bin \
-     /local/sbin /usr/bin/X11 \
-     /usr/local/munki \
-     /usr/local/bin \
-     /usr/local/sbin \
-     /opt/local/bin; do
-   test -d $dir && path=$path:$dir
+  /bin /local/bin /usr/bin /site/bin \
+  /sbin /usr/sbin \
+  /local/bin /local/gnu/bin \
+  /local/sbin /usr/bin/X11 \
+  /usr/local/munki \
+  /usr/local/bin \
+  /usr/local/sbin \
+  /opt/local/bin; do
+test -d $dir && path=$path:$dir
 done
 
 npath=`echo $path | sed 's/^://'`
@@ -52,16 +52,16 @@ export PATH=$PATH
 
 # use macvim as standard editor on darwin
 case $os in
-	"Darwin" )
-		EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"' ;;
-	* )
-		EDITOR="vim" ;;
+  "Darwin" )
+    EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"' ;;
+  * )
+    EDITOR="vim" ;;
 esac
 
 export EDITOR=$EDITOR
 
 # To use Homebrew's directories rather than ~/.rbenv add to your profile:
- export RBENV_ROOT=/usr/local/var/rbenv
+#  export RBENV_ROOT=/usr/local/var/rbenv
 
 # To enable shims and autocompletion add to your profile:
- if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

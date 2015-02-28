@@ -29,6 +29,9 @@ filetype plugin on
 filetype indent on
 filetype plugin indent on
 
+" fullscreen 
+set fullscreen
+
 
 " Optimize for fast terminal connections
 set ttyfast
