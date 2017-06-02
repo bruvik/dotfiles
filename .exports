@@ -10,6 +10,9 @@ export LESS_TERMCAP_md="$ORANGE"
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
+
+# Timestamps in bash history
+export HISTTIMEFORMAT="%y-%m-%d %T "
 # make vmware fusion default provider for vagrant
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 
