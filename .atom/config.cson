@@ -1,0 +1,20 @@
+"*":
+  "atom-clock":
+    dateFormat: "DD/MM/YYYY, H:mm"
+    locale: "no"
+  core:
+    projectHome: "/Users/asbruvik/code"
+    telemetryConsent: "limited"
+    themes: [
+      "solarized-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    fontSize: 12
+  "exception-reporting":
+    userId: "836added-8f47-4f60-859e-3360ffb05f68"
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  welcome:
+    showOnStartup: false
