@@ -50,7 +50,9 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 214 796 473 0 0 1280 800 </string>
+	<string>86 249 796 473 0 0 1280 800 </string>
+	<key>NSWindow Frame iTerm Window 0</key>
+	<string>131 73 570 452 0 0 1280 800 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -688,12 +690,21 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>6D65F050-C0E3-4013-A5C8-291CC2DBB7C9</string>
+	<key>NoSyncLastTipTime</key>
+	<real>518038993.62182403</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>517155126.691598</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+	</array>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -738,11 +749,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-23T21:32:15Z</date>
+	<date>2017-06-01T20:23:34Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
-	<string>/-+\~_.</string>
+	<string></string>
 	<key>iTerm Version</key>
 	<string>3.0.15</string>
 </dict>
