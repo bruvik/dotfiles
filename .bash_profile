@@ -69,10 +69,10 @@ declare -x PATH=$npath
 unset path npath
 export PATH=$PATH
 
-# use macvim as standard editor on darwin
+# use atom as standard editor on darwin
 case $os in
   "Darwin" )
-    EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"' ;;
+    EDITOR="atom" ;;
   * )
     EDITOR="vim" ;;
 esac
