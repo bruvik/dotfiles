@@ -53,12 +53,12 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 # set up path
 PATH=/bin:/usr/bin/:/local/bin
 for dir in $HOME/bin \
+	/usr/local/bin \
   /bin /local/bin /usr/bin /site/bin \
   /sbin /usr/sbin \
   /local/bin /local/gnu/bin \
   /local/sbin /usr/bin/X11 \
   /usr/local/munki \
-  /usr/local/bin \
   /usr/local/sbin \
   /opt/local/bin; do
 test -d $dir && path=$path:$dir
@@ -91,3 +91,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # iterm integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# virtualenv
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 source /usr/local/bin/virtualenvwrapper.sh

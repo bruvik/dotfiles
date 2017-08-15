@@ -39,3 +39,11 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export PIP_REQUIRE_VIRTUALENV=true
+
+# fix locale issues with python
+export LC_ALL=no_NO.UTF-8
+export LANG=no_NO.UTF-8
