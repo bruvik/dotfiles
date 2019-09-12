@@ -94,3 +94,9 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 # virtualenv
 VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 source /usr/local/bin/virtualenvwrapper.sh
+
+# gpg-agent
+# USE GPG as ssh-agent
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
