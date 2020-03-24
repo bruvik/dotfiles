@@ -1,8 +1,0 @@
-packages: [
-  "atom-clock"
-  "atomify"
-  "language-docker"
-  "language-groovy"
-  "package-sync"
-  "solarized-dark-ui"
-]

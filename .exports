@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Make vim the default editor
-export EDITOR="vim"
+export EDITOR="code --wait --new-window"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 # Highlight section titles in manual pages
@@ -15,9 +15,6 @@ export HISTFILESIZE=$HISTSIZE
 export HISTTIMEFORMAT="%y-%m-%d %T "
 # make vmware fusion default provider for vagrant
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
-
-# Make vim the default editor.
-export EDITOR='vim';
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;

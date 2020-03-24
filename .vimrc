@@ -1,6 +1,3 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
 " Make vim more useful
 set modeline
 
@@ -36,10 +33,6 @@ set expandtab
 filetype plugin on
 filetype indent on
 filetype plugin indent on
-
-" fullscreen 
-set fullscreen
-
 
 " Allow backspace in insert mode
 set backspace=indent,eol,start
@@ -128,14 +121,6 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.cf set ft=cf3
 	au FileType cf3 set expandtab
 endif
-
-" cfengine stuff
-" au BufRead,BufNewFile *.cf set ft=cf3
-:helptags ~/.vim/bundle/vim_cf3/doc/
-
-au BufRead,BufNewFile *.cf set ft=cf3
-" enable vim_cf3 plugin abbreviations
-let g:EnableCFE3KeywordAbbreviations=1
 
 fun! Getchar()
         let c = getchar()

@@ -16,6 +16,9 @@ alias p="cd ~/projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias os="openstack"
+alias os2="openstack --os-volume-api-version=2"
+alias cinder="cinder --os-volume-api-version=2"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

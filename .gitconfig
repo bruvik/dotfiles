@@ -79,7 +79,7 @@
 [apply]
 
 	# Detect whitespace errors when applying a patch
-	whitespace = fix
+	# whitespace = fix
 
 [core]
 
@@ -87,7 +87,7 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
-	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+	# whitespace = space-before-tab,indent-with-non-tab,trailing-space
 	autocrlf = input
 
 	# Make `git rebase` safer on macOS
@@ -97,7 +97,7 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
-	editor = atom -w
+	editor = code --wait --new-window
 
 [color]
 

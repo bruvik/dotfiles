@@ -14,6 +14,7 @@ brew install pass
 brew cask install tunnelblick
 brew install pinentry-mac
 brew install dnsmasq
+brew install mtr
 
 #install from mac app store:
 # slack, tweetbot, 1blocker, tyme, onedrive, kindle
@@ -24,6 +25,10 @@ git clone git@github.com:safespring/pass.git
 # set up dnsmasq - fix local dns settings manually:
 echo 'server=/cloud.ipnett.se/10.11.20.22' >> /usr/local/etc/dnsmasq.d/10-safespring
 echo 'server=/cloud.ipnett.no/10.11.20.22' > /usr/local/etc/dnsmasq.d/10-safespring
-
 sudo brew services start dnsmasq
 
+# virtualenv 
+export PIP_REQUIRE_VIRTUALENV=false
+pip3 install virtualenv
+pip3 install virtualenvwrapper
+export PIP_REQUIRE_VIRTUALENV=true
